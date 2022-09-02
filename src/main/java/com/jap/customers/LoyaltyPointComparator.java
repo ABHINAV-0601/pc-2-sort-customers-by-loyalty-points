@@ -12,8 +12,9 @@ public class LoyaltyPointComparator implements Comparator<Customer> {
         if(customer1.getLoyaltyPoints() > customer2.getLoyaltyPoints()){
             return -1;
         }
-        else{
+        else if(customer1.getLoyaltyPoints() < customer2.getLoyaltyPoints()){
             return 1;
         }
+        return 2;
     }
 }
